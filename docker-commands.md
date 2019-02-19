@@ -19,3 +19,14 @@ WARNING! This will remove:
         - all networks not used by at least one container
         - all dangling images
         - all build cache
+
+- `docker container prune` Remove all stopped containers
+- `docker volume prune` Remove all unused volumes
+- `docker image prune` Remove unused images
+
+## Step Docker Containers
+- `docker container stop [CONTAINERS...]`
+- `docker container stop $(docker container ls -a -q)` <- full command for stopping Docker containers
+- `docker container stop $(docker container ls -a -q) && docker system prune -a -f --volumes` <- full system clean
+
+
